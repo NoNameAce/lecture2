@@ -28,6 +28,12 @@ However **var** is a **functional scope** since loops and conditions are weaker 
 # Hoisting
 ### What is it?
 **Hosting** is calling our variable or function before creating it
+For Instance
+~~~ JS
+console.log(a)
+var a = 10
+~~~
+
 ### There are only two cases in which we can use **Hoisting**
 + With **Function Decloration**
 + With variable **var**
