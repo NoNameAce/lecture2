@@ -9,17 +9,40 @@ There are 2 types of scopes
 ### What is a **global Scope**?
 There is an invisible scope {} in JS. And everithing we write in it is a part of a GS An area where we write our code
 
+~~~ JS
+{
+    // Global Scope
+}
+~~~
+
 ### What is a **local scope**?
 The scope which is created in global scope is called LS. Our local scope has access to elements from the global scope however GS can does not have access LS codes or variables
+~~~
+function strDiapazon(num) {
+    let cnt = 10
+    return cnt
+}
+~~~
+
 Moreover LS is devided in two subtypes
 + Functional Scope
 + Block Scope
 
 ### What is **FS**?
 FS is a code written in a function
+~~~
+function strDiapazon(num) {
+    let cnt = 10
+    return cnt
+}
+~~~
 ### What is **BS**?
 BS is a written in conditions and loops
-
+~~~
+for(let i = 1; i < num; i++){
+        cnt += i + ","
+    }
+~~~
 ## Variables 
 Variables **const** and **let** are **block scope** 
 However **var** is a **functional scope** since loops and conditions are weaker than **var** but function is strong enough to hold it
