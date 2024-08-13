@@ -1,5 +1,4 @@
 # Scope
-## Explanation
 
 Scope a territory, area or a zone where you write your code
 There are 2 types of scopes
