@@ -1,62 +1,48 @@
 # Table of Contents
-## STRING
-## NUMBERS
+## Arrays
+## Array Methods
 
-### What is a Method in JavaScript?
+### What is a Array in JavaScript?
 
- A method is a block of code which only runs when
- it is called. Methods are used to
- perform certain actions, and they are also known
- as functions
+An **Array** in JavaScript is a type of global object used to store data.
+Arrays can store multiple values in a single variable,
+which can condense and organize our code
+~~~
+const cars = ["Saab", "Volvo", "BMW"];
+~~~
 
-There are many string methods in JS but here are some of them
-+ charAt()
-+ at()
+There are many **Array Methods** in JS but here are some of them
++ pop()
++ shift()
++ push()
++ unshift()
 + concat()
-+ replace()
-+ replaceAll()
-+  split()
-+ substring(start,end)
-+ slice(start, end)
-+ toLowerCase()
-+ toUpperCase()
-+ trim()
++  slice()
++ join()
 + includes()
-+ toString()
-+ parseInt()
 + indexOf()
-+ repeat()
-
-## JavaScript Number methods 
-There are also JS methods for numbers
-There are a lot of them but here are some
-+ Math.max()
-+ Math.min()
++ splice()
++ toString()
++ toReversed()
 ~~~
-let numbers = Math.max(1,2,3,4,5)
-console.log(numbers)
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2);
 
 ~~~
-
-+ Math.pow()
-+ Math.sqrt()
 
 ~~~
 let numbers = Math.pow(2,3)
 console.log(numbers)
 
 ~~~
-+  Math.abs()
-+  Math.random()
 ~~~
-let numbers = Math.abs(-16)
-console.log(numbers)
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
 ~~~
-## JavaScript Number method isNaN()
 
-~~~ JS
-let numbers = NaN
-console.log(isNaN(numbers))
+~~~ 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
 ~~~
 
 
