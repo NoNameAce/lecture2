@@ -42,7 +42,21 @@ fruits.push("Kiwi");
 
 ~~~ 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.shift();
+fruits.unshift("Lemon")
+~~~
+~~~ 
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+~~~
+~~~ 
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+~~~
+~~~ 
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
 ~~~
 
 
