@@ -59,5 +59,66 @@ const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 const citrus = fruits.slice(1);
 ~~~
 
+## Array Method Callbacks
+
+The functions that can contain functions in it are called **Callbacks**
+There are Many Callbacks in JS but here are some
+
+JS array Method **Map**
+We use map to change and return elements in Array
+However we can not change the length of array
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.map((element, index, array) => {"The condition"})
+~~~
+
+JS array Method **forEach**
+Foreach works as **map** but it does not return
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.forEach((element, index, array) => {"The condition"})
+
+~~~
+JS array Method **find**
+**Find** is used to find some exact elements we need
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.find((element, index, array) => {"The condition"})
+~~~
+
+JS array Method **filter**
+**Filter** is used to clear our array and return the elements we need
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.filter((element, index, array) => {"The condition"})
+~~~
+
+JS array Method **reduce**
+**reduce** is usually used for calculation
+It accepts accumulator which is the previous value and current value
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.reduce((accumulator, element, index, array) => {"The condition"})
+~~~
+
+JS array Method **toSorted**
+**toSorted** is used for sorting our array in order
+~~~
+let arr = [1,2,3,4,5]
+let res = arr.toSorted((element, index, array) => {"The condition"})
+~~~
+
+## There are Mechanisms in JS
+Here are some:
+
+**Destructurisation**
+It is used to add our array's values to variables
+
+**Spread**
+It is used to get our values in function in one array for us when we dont know exactly how many values should it contain
+
+**rest**
+It allows a function to accept an indefinite arguments. It must be the only and last parameter in function
+
 
 
