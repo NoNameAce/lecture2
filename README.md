@@ -5,9 +5,7 @@
 
 ### What is Object in JavaScript?
 
-**Objects** in JavaScript offer you tremendous flexibility and code re usability,
-you are able to create self contained units to store data, characteristics and methods,
-as opposed to long scripts of procedural code.
+**Objects** in JavaScript is a thing with properties: With keys And values
 
 ## So what is an object?
 
