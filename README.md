@@ -5,7 +5,7 @@
 
 ### What is Object in JavaScript?
 
-**Objects** in JavaScript is a thing with properties: With keys And values
+**Objects** in JavaScript is a code with properties: With keys And values
 
 ## So what is an object?
 
