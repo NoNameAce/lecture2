@@ -1,124 +1,107 @@
 # Table of Contents
-## Arrays
-## Array Methods
+## Object
+## Destructurisation
+## Spread
 
-### What is a Array in JavaScript?
+### What is Object in JavaScript?
 
-An **Array** in JavaScript is a type of global object used to store data.
-Arrays can store multiple values in a single variable,
-which can condense and organize our code
-~~~
-const cars = ["Saab", "Volvo", "BMW"];
-~~~
+**Objects** in JavaScript offer you tremendous flexibility and code re usability,
+you are able to create self contained units to store data, characteristics and methods,
+as opposed to long scripts of procedural code.
 
-There are many **Array Methods** in JS but here are some of them
-+ pop()
-+ shift()
-+ push()
-+ unshift()
-+ concat()
-+  slice()
-+ join()
-+ includes()
-+ indexOf()
-+ splice()
-+ toString()
-+ toReversed()
-~~~
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let fruit = fruits.at(2);
+## So what is an object?
 
-~~~
+Well, step away from code for the time being and think of a real world object, take a car for example.
 
-~~~
-let numbers = Math.pow(2,3)
-console.log(numbers)
+A car as itself is an object, the car has properties:
 
++ Doors
++ Colour
++ Wheels
++ Manual Transmission
+Now these are only a few properties of a car but start to think of what values these properties could have.
+
++ Doors = 4
++ Colour = Black
++ Wheels = 4
++ Manual Transmission = True
+Notice the 3 different data types used here, string, number and Boolean, this should give you a basic grasp on what an object is, now lets apply it in the realm of JavaScript and create our first object.
 ~~~
-~~~
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.push("Kiwi");
+function myCar(){
+  doors = 4;
+  colour = "black";
+  wheels = 4:
+  manualTransmission = true;
+}
+console.log(myCar.colour);
 ~~~
 
+## Object Methods in JS
+
+Objects in JavaScript are collections of key/value pairs. The values can consist of properties and methods,
+and may contain all other JavaScript data types, such as strings, numbers, and Booleans
+
+**Object.entries()**
+Gets our Object with its properties in arrays
+
+~~~
+const obj = {
+  a: 'somestring',
+  b: 42,
+};
+
+let res = Object.entries(obj))
+
+~~~
+
+**Object.keys()**
+It creates an array containing the keys of an object.
+~~~
+let obj = {
+  boss: "Kamol",
+  secretary: "Anush",
+  sales: "Shodob"
+};
+
+let res = Object.keys(obj);
+
+console.log(res);
+
+~~~
+
+**Object.values()**
+It creates an array containing the values of an object
+~~~
+let obj = {
+  id: 1,
+  time: `26-July-2018`,
+  device: "mobile",
+  browser: "Chrome"
+};
+
+let res = Object.values(obj);
+
+console.log(res);
+~~~
+
+## What is Destructuring, Rest and Spread operator in JavaScript?
+
++ Destructuring is a functional programming concept
++ It will unpack values from array or properties from object to individual variables
++ Array De-structuring:
+
+~~~
+let person = {"fName":"Chandu", "lName":"Pasumarthi"}
+let {lName, fName} = person
+~~~
+
+## Spread Mechanism
+Spread operator syntax is similar to Rest property in array de-structuring,
+But Spread will split into individual elements whereas rest collects into an array
 ~~~ 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.unshift("Lemon")
-~~~
-~~~ 
-const myGirls = ["Cecilie", "Lone"];
-const myBoys = ["Emil", "Tobias", "Linus"];
+let numbers = {"1":"One", "2":"Two"}
 
-const myChildren = myGirls.concat(myBoys);
+let moreNums = {...numbers}
+console.log(moreNums)
 ~~~
-~~~ 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 0, "Lemon", "Kiwi");
-~~~
-~~~ 
-const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-const citrus = fruits.slice(1);
-~~~
-
-## Array Method Callbacks
-
-The functions that can contain functions in it are called **Callbacks**
-There are Many Callbacks in JS but here are some
-
-JS array Method **Map**
-We use map to change and return elements in Array
-However we can not change the length of array
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.map((element, index, array) => {"The condition"})
-~~~
-
-JS array Method **forEach**
-Foreach works as **map** but it does not return
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.forEach((element, index, array) => {"The condition"})
-
-~~~
-JS array Method **find**
-**Find** is used to find some exact elements we need
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.find((element, index, array) => {"The condition"})
-~~~
-
-JS array Method **filter**
-**Filter** is used to clear our array and return the elements we need
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.filter((element, index, array) => {"The condition"})
-~~~
-
-JS array Method **reduce**
-**reduce** is usually used for calculation
-It accepts accumulator which is the previous value and current value
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.reduce((accumulator, element, index, array) => {"The condition"})
-~~~
-
-JS array Method **toSorted**
-**toSorted** is used for sorting our array in order
-~~~
-let arr = [1,2,3,4,5]
-let res = arr.toSorted((element, index, array) => {"The condition"})
-~~~
-
-## There are Mechanisms in JS
-Here are some:
-
-**Destructurisation**
-It is used to add our array's values to variables
-
-**Spread**
-It is used to get our values in function in one array for us when we dont know exactly how many values should it contain
-
-**rest**
-It allows a function to accept an indefinite arguments. It must be the only and last parameter in function
-
-
 
