@@ -1,19 +1,12 @@
 ### New Dates
-
 1. Current Date and Time:
       const now = new Date();
    console.log(now);
    
-
-
 3. Date from String:
       const dateFromString = new Date('2024-08-29T10:30:00');
    console.log(dateFromString);
    
-
-
-
-
 ### Common Methods
 
 1. Getting Date Components:
@@ -25,13 +18,6 @@
    console.log(date.getHours()); // Hours
    console.log(date.getMinutes()); // Minutes
    console.log(date.getSeconds()); // Seconds
-   
-
-
-
-
-
-
 
    In JavaScript, the Set object is a built-in data structure that lets you store unique values of any type, whether primitive values or object references. It was introduced in ECMAScript 2015 (ES6) and has since become an essential part of the language. Here’s a comprehensive overview of the Set object, including new features and common use cases:
 
@@ -51,41 +37,32 @@ In JavaScript, the Set object has a range of methods to manage collections of un
 
 ### Core Set Methods
 
-1. `add(value)`
+1. add(value)
    - Description: Adds a new element to the Set. If the value already exists, it has no effect.
    - Usage:
-          const mySet = new Set();
+      let mySet = new Set();
      mySet.add(1);
      mySet.add(2);
-     console.log(mySet); // Set { 1, 2 }
-     
+     console.log(mySet); 
 
-2. `delete(value)`
+2. delete(value)
    - Description: Removes the specified value from the Set. Returns true if the value was removed, or false if the value was not found.
    - Usage:
           mySet.delete(1);
-     console.log(mySet); // Set { 2 }
-     
+     console.log(mySet);
 
-3. `has(value)`
+3. has(value)
    - Description: Checks if a value exists in the Set. Returns true if the value is present, otherwise false.
    - Usage:
-      console.log(mySet.has(2)); // true
-     console.log(mySet.has(1)); // false
+      console.log(mySet.has(2));
+     console.log(mySet.has(1));
      
-
-4. 
-
-5. `forEach(callbackFn, thisArg)`
++ forEach(callbackFn, thisArg)
    - Description: Executes a provided function once for each value in the Set, in insertion order.
    - Usage:
           mySet.forEach(value => console.log(value));
      
-
-
-   
-
-7. `values()`
+7. values()
    - Description: Returns a new iterator object that contains the values of the Set in insertion order.
    - Usage:
           const iterator = mySet.values();
@@ -94,10 +71,10 @@ In JavaScript, the Set object has a range of methods to manage collections of un
      }
      
 
-8. `keys()`
++ keys()
    - Description: Returns a new iterator object that contains the keys of the Set. Since a Set is a collection of unique values, the keys are the same as the values.
    - Usage:
-          const iterator = mySet.keys();
+      let iterator = mySet.keys();
      for (const key of iterator) {
        console.log(key);
      }
