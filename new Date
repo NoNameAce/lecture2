@@ -70,7 +70,7 @@ In JavaScript, the Set object has a range of methods to manage collections of un
 3. `has(value)`
    - Description: Checks if a value exists in the Set. Returns true if the value is present, otherwise false.
    - Usage:
-          console.log(mySet.has(2)); // true
+      console.log(mySet.has(2)); // true
      console.log(mySet.has(1)); // false
      
 
