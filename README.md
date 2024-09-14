@@ -1,105 +1,95 @@
 # Table of Contents
-## Object
-## Destructurisation
-## Spread
+## Synchronous
+## Asynchronous
+## new Promise
 
-### What is Object in JavaScript?
+### What is synch/async code in JavaScript ?
 
-**Objects** in JavaScript is a code with properties: With keys And values
+**Syncronus** programming provides opportunities for a program to continue
+running other code while waiting for a long-running task to complete. The timeconsuming task is executed in the background while the rest of the code continues to
+execute.
++ most code are synchtonous
++ Synchronous code is executed line by line
++ Each line of code waits for previous line to finish.
++ 
+**ASyncronus** means the code runs in a particular sequence of instructions given
+in the program. Each instruction waits for the previous instruction to complete
+its execution.
++ Asynchronous code is executed after a task that runs
++ Its non-blocking
++ Callback function alone do NOT make code asynchronous
++ Execution does not wait for an asynchronous task to finish its work
 
-## So what is an object?
+## How to create Asynchronous code?
+There are three ways to create **Asyncronus**
+1.Callbacks:
+```
+setTimeout(() => {
+    
+}, timeout);
+```
+2.Promise:
+```
+let promise = new Promise((resolve, rejected) => {
+    // logic
+})   
+```
+3.async/await:
+```
+async function get(example) {
+    awaits//...
+}
+```
 
-Well, step away from code for the time being and think of a real world object, take a car for example.
+## Asynchronous callbacks
+
+Asynchronous callbacks are functions passed to another function that starts executing
+code in the background. Typically, when the code in the background finishes, the async
+callback function is called as a way of notifying and passing on data to the callback
+function that the background task is finished.
 
 A car as itself is an object, the car has properties:
 
-+ Doors
-+ Colour
-+ Wheels
-+ Manual Transmission
-Now these are only a few properties of a car but start to think of what values these properties could have.
-
-+ Doors = 4
-+ Colour = Black
-+ Wheels = 4
-+ Manual Transmission = True
-Notice the 3 different data types used here, string, number and Boolean, this should give you a basic grasp on what an object is, now lets apply it in the realm of JavaScript and create our first object.
-~~~
-function myCar(){
-  doors = 4;
-  colour = "black";
-  wheels = 4:
-  manualTransmission = true;
+```
+setInterval(() => {
+    console.log(1);
+}, 3000)
+```
+## new Promise
+In JavaScript, a promiseis a good way to handle asynchronous operations. It
+is used to find out if the asynchronous operation is successfully completed or
+not.
+The Promise() constructor takes a function as an argument. The function also
+accepts two functions resolve() and reject().
+If the promise returns successfully, the resolve() function is called. And, if an
+error occurs, the reject() function is called.
+```
+let promise = new Promise((resolve, rejected) => {
+    // Do somethink
+})   
+```
+## keyword async
+The async keyword transforms a regular JavaScript function into an
+asynchronous function, causing it to return a Promise. The await keyword is
+used inside an async function to pause its execution and wait for a Promise to
+resolve before continuing.
+```
+async function get(example) {
+    // Statement
 }
-console.log(myCar.colour);
-~~~
+```
 
-## Object Methods in JS
+## try/catch
+The **try...catch** construct attempts to execute the statements in the try
+block, and if an error occurs, executes the catch block.
 
-Objects in JavaScript are collections of key/value pairs. The values can consist of properties and methods,
-and may contain all other JavaScript data types, such as strings, numbers, and Booleans
+try...catch works like this: code that might throw an
+error is placed in a try block. If an error occurs in the
+try block, the program goes to the catch block, where
+you can handle the error and take the necessary
+actions. However, the rest of the code continues to
+execute and your application won't break.
 
-**Object.entries()**
-Gets our Object with its properties in arrays
 
-~~~
-const obj = {
-  a: 'somestring',
-  b: 42,
-};
 
-let res = Object.entries(obj))
-
-~~~
-
-**Object.keys()**
-It creates an array containing the keys of an object.
-~~~
-let obj = {
-  boss: "Kamol",
-  secretary: "Anush",
-  sales: "Shodob"
-};
-
-let res = Object.keys(obj);
-
-console.log(res);
-
-~~~
-
-**Object.values()**
-It creates an array containing the values of an object
-~~~
-let obj = {
-  id: 1,
-  time: `26-July-2018`,
-  device: "mobile",
-  browser: "Chrome"
-};
-
-let res = Object.values(obj);
-
-console.log(res);
-~~~
-
-## What is Destructuring, Rest and Spread operator in JavaScript?
-
-+ Destructuring is a functional programming concept
-+ It will unpack values from array or properties from object to individual variables
-+ Array De-structuring:
-
-~~~
-let person = {"fName":"Chandu", "lName":"Pasumarthi"}
-let {lName, fName} = person
-~~~
-
-## Spread Mechanism
-Spread operator syntax is similar to Rest property in array de-structuring,
-But Spread will split into individual elements whereas rest collects into an array
-~~~ 
-let numbers = {"1":"One", "2":"Two"}
-
-let moreNums = {...numbers}
-console.log(moreNums)
-~~~
 
